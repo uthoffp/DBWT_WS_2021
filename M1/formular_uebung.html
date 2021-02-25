@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Anmeldung</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<form method="post" action="">
+    <fieldset>
+        <legend>Anmeldung</legend>
+        <label>Anrede</label><br>
+        <input type="radio" name="gender">Frau</input><br>
+        <input type="radio" name="gender">Herr</input><br><br>
+        <label>Vorname*</label><br>
+        <input type="text" class="textInput" placeholder="Bitte geben sie Ihren Vornamen ein" required><br>
+        <label>Nachname*</label><br>
+        <input type="text" class="textInput" placeholder="Bitte geben sie Ihren Nachname ein" required><br>
+        <label>E-Mail*</label><br>
+        <input type="email" class="textInput" placeholder="Bitte geben sie Ihren Nachname ein" required><br>
+        <label>Benachrichtigung*</label><br>
+        <select>
+            <option value="1">Gut</option>
+            <option value="2">Geht so</option>
+            <option value="3">Schlecht</option>
+        </select><br>
+        <input type="checkbox">Datenschutzhinweise gelesen</input><br>
+        <input type="submit" value="Abschicken">
+    </fieldset>
+</form>
+</body>
+</html>

@@ -1,0 +1,52 @@
+* {
+    margin: auto;
+    max-width: 87%;
+}
+
+a {
+    color: #00b5ad;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0px, 1fr))
+}
+
+main {
+    align-content: center;
+}
+
+table, td, th {
+    border: 1px solid black;
+}
+
+table {
+    width: 75%;
+    border-collapse: collapse;
+}
+
+h2 {
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+
+#frontImage {
+    width: 100%;
+    padding-left: 78px;
+    padding-top: 10px;
+}
+
+.navBar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#startForm {
+    display: flex;
+    align-content: start;
+}
