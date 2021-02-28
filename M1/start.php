@@ -48,16 +48,22 @@
                     <td></td>
                     <td>Preis intern</td>
                     <td>Preis extern</td>
-                    <td>Bild</td>
                 </tr>
                 </thead>
 
                 <?php const filename = "meals.txt";
                 if (file_exists(filename)) {
-                    $meals = unserialize(file_get_contents(filename));
-                    foreach ($meals as $meal) {
-                        echo "<tr><td>{$meal['name']}</td><td>{$meal['price_intern']}&euro;</td><td>{$meal['price_extern']}&euro;</td>";
-                        echo "<td><img src='{$meal['img']}' alt='placeholder' width='50px' height='50px'></td></tr>";
+                    include "connection.php";
+
+                    $query = "SELECT name, beschreibung, preis_extern, preis_intern FROM gericht ORDER BY RAND() LIMIT 5;";
+                    $result = mysqli_query($link, $query);
+                    if (!$result) {
+                        echo "Fehler während der Abfrage:  ", mysqli_error($link);
+                        exit();
+                    }
+
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo "<tr><td>{$row['name']}</td><td>{$row['preis_intern']}&euro;</td><td>{$row['preis_extern']}&euro;</td></tr>";
                     }
                 } ?>
             </table>
